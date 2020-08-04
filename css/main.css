@@ -1,0 +1,174 @@
+/* The :root is to set a general style for the page,
+ the 62.5% is equivalent to 10px when you do this calculation(). 
+ So if we set any rem value in the page it will set it to the value * 10, 
+ so 1.8rem will mean 18px because of the default 62.5% we gave it */
+
+:root {
+    background-color: #f3b96c;
+    font-size: 62.5%;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 3.4rem;
+    color: #f03202;
+    margin-bottom: 5rem;
+}
+
+
+
+
+
+
+/*********************************************
+    This is for the span that is a child of h1 
+**********************************************/
+h1 > span {
+    font-size: 2.4rem;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 3.2rem;
+    margin-bottom: 4rem;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 2.8rem;
+    font-weight: 500;
+}
+
+
+
+
+
+/**************************
+    UTILITIES
+***************************/
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+
+
+
+
+
+/*******************************************
+    All the children of the container class
+********************************************/
+.container > * {
+    width: 100%;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+
+
+/************************ 
+    BUTTONS 
+************************/
+.btn {
+    font-size: 1.8rem;
+    padding: 1rem 0;
+    width: 20rem;
+    text-align: center;
+    border: 0.1rem solid #f03202;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: #f03202;
+    background-color: white;
+}
+
+.btn:hover {
+    cursor: pointer;
+    /* Box shadow will give it a shadow, used rgba so we'll be able to 
+    give the color an opacity which is the alpha value of 0.5 that is there */
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(223, 67, 5, 0.897);
+
+    /* The transform translateY will transform it or move it in the y axis, 
+    the -0.1rem will make it move up the y axis and not down 
+    While the transition will make the transform happen in 150miliseconds
+    */
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+}
+
+.btn[disabled]:hover {
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+
+
+
+
+/*********************
+    End game css
+*********************/
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    width: 20rem;
+    padding: 1.5rem;
+    font-size: 1.8rem;
+    border: none;
+    margin-bottom: 1rem;
+    box-shadow: 0 0.1rem 1.4rem 0 rgba(223, 67, 5, 0.897);
+}
+
+input::placeholder {
+    color: #aaa;
+}

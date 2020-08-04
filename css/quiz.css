@@ -1,0 +1,66 @@
+.choice-container {
+    display: flex;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    font-size: 1.8rem;
+    border: 0.1rem solid rgb(150, 42, 0);
+    background-color: white;
+}
+
+.choice-container:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(223, 67, 5, 0.897);
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+}
+
+.choice-prefix {
+    padding: 1.5rem 2.5rem;
+    background-color: #f03202;
+    color: white;
+}
+
+.choice-text {
+    padding: 1.5rem;
+    width: 100%;
+}
+
+.incorrect {
+    background-color: #fc0019;
+}
+
+.correct {
+    background-color: #2fa745;
+}
+
+
+/*************************
+    Head's Up Display
+*************************/
+
+#hud {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hud-prefix {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.hud-main-text {
+    text-align: center;
+}
+
+#progressBar {
+    width: 20rem;
+    height: 4rem;
+    border: 0.3rem solid #f03202;
+    margin-top: 0.5rem;
+}
+
+#progress-bar-full {
+    height: 3.4rem;
+    background-color: #f03202;
+    /* width: 100%; */
+}
