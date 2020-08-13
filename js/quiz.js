@@ -49,7 +49,7 @@ let questions = [
         choice2: "2 months",
         choice3: "1week",
         choice4: "3weeks",
-        answer: 4
+        answer: 3
     },
     {
         question: "Who is my favourite DC superhero?",
